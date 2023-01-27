@@ -14,7 +14,7 @@ string[] FillArray(string[] array)
     for (int i = 0; i < array.GetLength(0); i++)
     {
         Console.WriteLine("Введите строковое значение...");
-        array[i] = Console.ReadLine();
+        array[i] = Console.ReadLine()!;
     }
     return array;
 }

@@ -25,10 +25,17 @@ void PrintArray(string[] array)
     Console.Write("[");
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        Console.Write($"\"{array[i]}\"");
+        if (i != array.GetLength(0)-1)
+        {
+            Console.Write($"\"{array[i]}\", ");
+        }
+        else
+        {
+            Console.Write($"\"{array[i]}\"");
+        }
     }
     Console.Write("]");
 }
 
-string[] testArray = FillArray(GetArray(2));
+string[] testArray = FillArray(GetArray(3));
 PrintArray(testArray);

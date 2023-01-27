@@ -22,11 +22,13 @@ string[] FillArray(string[] array)
 // Метод для вывода в консоль элементов массива...
 void PrintArray(string[] array)
 {
+    Console.Write("[");
     for (int i = 0; i < array.GetLength(0); i++)
     {
-        Console.Write(array[i]);
+        Console.Write($"\"{array[i]}\"");
     }
+    Console.Write("]");
 }
 
-string[] testArray = FillArray(GetArray(5));
+string[] testArray = FillArray(GetArray(2));
 PrintArray(testArray);

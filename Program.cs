@@ -28,5 +28,18 @@ void PrintArray(string[] array)
     }
 }
 
+int CheckArray(string[] array)
+{
+    int k = 0;
+    foreach (string element in array)
+    {
+        if (element.Length <= 3) k++;
+    }
+    return k;
+}
+
 string[] testArray = FillArray(GetArray(5));
 PrintArray(testArray);
+Console.WriteLine(CheckArray(testArray));
+
+

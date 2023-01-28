@@ -48,13 +48,31 @@ int CheckArray(string[] array)
     return k;
 }
 
+string[] ArratByCondition (string[] origArray, string[] modArray)
+{
+    int i = 0;
+    foreach (string element in origArray)
+    {
+        if (element.Length < 4)
+        {
+            modArray[i] = element;
+            i++;
+        }
+    }
+    return modArray;
+}
+
 Console.WriteLine("Введите количество строковых элементов...");
 
 string[] originalArray = FillArray(GetArray(int.Parse(Console.ReadLine()!)));
 
-string[] modifiedArray = FillArray(GetArray(CheckArray(originalArray)));
+string[] modifiedArray = ArratByCondition(originalArray, GetArray(CheckArray(originalArray)));
 
 
 PrintArray(originalArray);
-Console.WriteLine();
+
+Console.Write(" -> ");
+
 PrintArray(modifiedArray);
+
+Console.WriteLine();

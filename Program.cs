@@ -37,5 +37,16 @@ void PrintArray(string[] array)
     Console.Write("]");
 }
 
-string[] testArray = FillArray(GetArray(3));
-PrintArray(testArray);
+//Метод проверяет отбирает элементы, в которых кол-во символов меншьше четырёх, и возвращает их количество
+int CheckArray(string[] array)
+{
+    int k = 0;
+    foreach (string element in array)
+    {
+        if (element.Length < 4) k++;
+    }
+    return k;
+}
+
+
+

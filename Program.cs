@@ -48,7 +48,8 @@ int CheckArray(string[] array)
     return k;
 }
 
-string[] ArratByCondition (string[] origArray, string[] modArray)
+//Метод заполняет массив modArray элементами из массива  origArray по условию, что длина элемента мееньще 4х символов.
+string[] ArrayByCondition (string[] origArray, string[] modArray)
 {
     int i = 0;
     foreach (string element in origArray)
@@ -66,7 +67,7 @@ Console.WriteLine("Введите количество строковых эле
 
 string[] originalArray = FillArray(GetArray(int.Parse(Console.ReadLine()!)));
 
-string[] modifiedArray = ArratByCondition(originalArray, GetArray(CheckArray(originalArray)));
+string[] modifiedArray =ArrayByCondition(originalArray, GetArray(CheckArray(originalArray)));
 
 
 PrintArray(originalArray);

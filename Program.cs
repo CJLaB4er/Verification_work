@@ -48,5 +48,13 @@ int CheckArray(string[] array)
     return k;
 }
 
+Console.WriteLine("Введите количество строковых элементов...");
+
+string[] originalArray = FillArray(GetArray(int.Parse(Console.ReadLine()!)));
+
+string[] modifiedArray = FillArray(GetArray(CheckArray(originalArray)));
 
 
+PrintArray(originalArray);
+Console.WriteLine();
+PrintArray(modifiedArray);

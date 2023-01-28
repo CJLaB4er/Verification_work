@@ -5,6 +5,7 @@ Console.Clear();
 // Метод для создания строкового массива определенного размера...
 string[] GetArray(int size)
 {
+    Console.Clear();
     string[] newArray = new string[size];
     return newArray;
 }

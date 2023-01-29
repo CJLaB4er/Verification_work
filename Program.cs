@@ -67,10 +67,17 @@ string[] ArrayByCondition (string[] origArray, string[] modArray)
 
 Console.WriteLine("Введите количество строковых элементов...");
 
-string[] originalArray = FillArray(GetArray(int.Parse(Console.ReadLine()!)));
+int size = int.Parse(Console.ReadLine()!);
 
-string[] modifiedArray =ArrayByCondition(originalArray, GetArray(CheckArray(originalArray)));
+string[] originalArray = GetArray(size);
 
+originalArray = FillArray(originalArray);
+
+size = CheckArray(originalArray);
+
+string[] modifiedArray = GetArray(size);
+
+modifiedArray = ArrayByCondition(originalArray, modifiedArray);
 
 PrintArray(originalArray);
 
